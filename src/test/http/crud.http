@@ -1,0 +1,29 @@
+### GET All Cars
+GET http://localhost:8080/api/cars
+
+### GET first Car by ID
+GET http://localhost:8080/api/cars/1
+
+### DELETE second Car by ID
+DELETE http://localhost:8080/api/cars/2
+
+### Create a new Car
+POST http://localhost:8080/api/cars
+Content-Type: application/json
+
+{
+  "brand": "Toyota",
+  "model": "Corolla",
+  "year": 2020
+}
+
+### Update a Car
+PUT http://localhost:8080/api/cars/1
+Content-Type: application/json
+
+{
+  "id": "1",
+  "brand": "Honda",
+  "model": "Civic",
+  "year": 2019
+}
