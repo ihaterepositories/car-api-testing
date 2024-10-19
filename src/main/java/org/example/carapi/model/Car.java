@@ -8,9 +8,16 @@ package org.example.carapi.model;
   @since 30.09.2024 - 22:35
 */
 
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 @Document(collection = "cars")
 public class Car {
     @Id
@@ -18,6 +25,12 @@ public class Car {
     private String brand;
     private String model;
     private int year;
+
+    public Car(String brand, String model, int year) {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+    }
 
     public String getId() {
         return id;

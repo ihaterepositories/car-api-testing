@@ -11,7 +11,13 @@ package org.example.carapi.repository;
 import org.example.carapi.model.Car;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
+import java.util.List;
+
 public interface CarRepository extends MongoRepository<Car, String> {
+
+    List<Car> findByBrand(String brand);
+    Car findByModel(String model);
+    List<Car> findByYearGreaterThan(int year);
 
 }
 
